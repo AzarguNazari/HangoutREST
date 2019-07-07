@@ -15,8 +15,9 @@ public class User implements Serializable{
 	private String firstname;
 	private String lastname;
 	private Date createdDate;
-	private List<User> friends;
-	private List<Message> messages;
+	private List<Long> friends;
+	private List<Long> messages;
+	private List<Long> posts;
 	
 	public User() {}
 	
@@ -26,6 +27,7 @@ public class User implements Serializable{
 		this.lastname = lastname;
 		friends = new ArrayList<>();
 		messages = new ArrayList<>();
+		posts = new ArrayList<>();
 	}
 	
 	public long getId() {
@@ -50,8 +52,17 @@ public class User implements Serializable{
 		return createdDate;
 	}
 	
-	public List<User> getFriends() {
+	public List<Long> getFriends() {
 		return friends;
 	}
+
+	public List<Long> getMessages() {
+		return messages;
+	}
+
+	public List<Long> getPosts() {
+		return posts;
+	}
+
 	
 }

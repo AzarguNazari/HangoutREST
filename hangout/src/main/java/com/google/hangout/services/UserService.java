@@ -1,5 +1,7 @@
 package com.google.hangout.services;
 
-public class Services {
+public class UserService {
 
+	
+	
 }
